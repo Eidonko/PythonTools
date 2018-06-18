@@ -34,6 +34,7 @@ Please note the use of quotes in the third line.
 
 Note: the difference between --param and --paramstr is that in the latter case the value is quoted
 
+
 ## Class megapixel
 A megapixel image has physical dimensions ((dim x dim) pixels) and _logical_ dimensions ((megadim x megadim) megapixels).
 Each megapixel corresponds to a cluster of physical pixels in some (dim x dim) reference image.
@@ -45,3 +46,13 @@ Class megapix manages the translation from megapixels to pixels. In particular,
 
 Limitations:
 The current version only works with square images and assumes that the megapixel image fits perfectly into the physical image
+
+
+## Utility plotTxtFiles
+
+Usage:
+
+    ./plotTxtFiles { -i dataFile.txt }+  -o outputImage.png -x XLabel -T title -f From -t To -v
+
+Plots various data files together. Output goes into outputImage.png. Title is specified via -T. The abscissas label is specified via -x. Options -f From and -t To select lines [From:To+1] for printing.
+
